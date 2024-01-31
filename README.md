@@ -4,7 +4,7 @@
 
 ETL (Extract, Transform & Load) is a foundational skill. In the real world, data is everywhere and often scattered across multiple sources, and it can be messy. Understanding how to extract, load, and transform data is a critical concept as it enables you to have clean, up-to-date, and accurate data. It empowers you to become an expert in your data by allowing you to manipulate data types, fix formatting issues, and create additional columns to enrich and gain meaningful insights from your data. In this project, I will be using the data below to perform extraction, transformation, and loading of the data.
 
-##Sources of data
+## Sources of data
 
 Within Resources Folder:
 
@@ -58,20 +58,20 @@ A "category" column that contains only the category titles
 ## Create the Campaign DataFrame
 
 1. Extract and transform the crowdfunding.xlsx Excel data to create a campaign DataFrame has the following columns:
-*     The "cf_id" column
-*     The "contact_id" column
-*     The "company_name" column
-*     The "blurb" column, renamed to "description"
-*     The "goal" column, converted to the float data type
-*     The "pledged" column, converted to the float data type
-*     The "outcome" column
-*     The "backers_count" column
-*     The "country" column
-*     The "currency" column
-*     The "launched_at" column, renamed to "launch_date" and with the UTC times converted to the datetime format
-*     The "deadline" column, renamed to "end_date" and with the UTC times converted to the datetime format
-*     The "category_id" column, with unique identification numbers matching those in the "category_id" column of the category DataFrame
-*     The "subcategory_id" column, with the unique identification numbers matching those in the "subcategory_id" column of the subcategory DataFrame
+*    The "cf_id" column
+*    The "contact_id" column
+*    The "company_name" column
+*    The "blurb" column, renamed to "description"
+*    The "goal" column, converted to the float data type
+*    The "pledged" column, converted to the float data type
+*    The "outcome" column
+*    The "backers_count" column
+*    The "country" column
+*    The "currency" column
+*    The "launched_at" column, renamed to "launch_date" and with the UTC times converted to the datetime format
+*    The "deadline" column, renamed to "end_date" and with the UTC times converted to the datetime format
+*    The "category_id" column, with unique identification numbers matching those in the "category_id" column of the category DataFrame
+*    The "subcategory_id" column, with the unique identification numbers matching those in the "subcategory_id" column of the subcategory DataFrame
 *     Export the campaign DataFrame as campaign.csv and save it to your GitHub repository.
 ## Create the Contacts DataFrame
 
@@ -79,28 +79,35 @@ A "category" column that contains only the category titles
 *    Option 1: Use Python dictionary methods.
 *    Option 2: Use regular expressions.
 2. If you chose Option 1, complete the following steps:
-*     Import the contacts.xlsx file into a DataFrame.
-*     Iterate through the DataFrame, converting each row to a dictionary.
-*     Iterate through each dictionary, doing the following:
-*     Extract the dictionary values from the keys by using a Python list comprehension.
-*     Add the values for each row to a new list.
-*     Create a new DataFrame that contains the extracted data.
-*     Split each "name" column value into a first and last name, and place each in a new column.
-*     Clean and export the DataFrame as contacts.csv and save it to your GitHub repository.
+*    Import the contacts.xlsx file into a DataFrame.
+*    Iterate through the DataFrame, converting each row to a dictionary.
+*    Iterate through each dictionary, doing the following:
+*    Extract the dictionary values from the keys by using a Python list comprehension.
+*    Add the values for each row to a new list.
+*    Create a new DataFrame that contains the extracted data.
+*    Split each "name" column value into a first and last name, and place each in a new column.
+*    Clean and export the DataFrame as contacts.csv and save it to your GitHub repository.
 3.If you chose Option 2, complete the following steps:
-*     Import the contacts.xlsx file into a DataFrame.
-*     Extract the "contact_id", "name", and "email" columns by using regular expressions.
-*     Create a new DataFrame with the extracted data.
-*     Convert the "contact_id" column to the integer type.
-*     Split each "name" column value into a first and a last name, and place each in a new column.
-*     Clean and then export the DataFrame as contacts.csv and save it to your GitHub repository.
+*    Import the contacts.xlsx file into a DataFrame.
+*    Extract the "contact_id", "name", and "email" columns by using regular expressions.
+*    Create a new DataFrame with the extracted data.
+*    Convert the "contact_id" column to the integer type.
+*    Split each "name" column value into a first and a last name, and place each in a new column.
+*    Clean and then export the DataFrame as contacts.csv and save it to your GitHub repository.
 ## Create the Crowdfunding Database
 
-1.Inspect the four CSV files, and then sketch an ERD of the tables by using QuickDBDLinks to an external site..
+1.Inspect the four CSV files, and then sketch an ERD of the tables by using QuickDBDLinks to an external site.
+
 2.Use the information from the ERD to create a table schema for each CSV file.
+
 3.Save the database schema as a Postgres file named crowdfunding_db_schema.sql, and save it to your GitHub repository.
+
 4.Create a new Postgres database, named crowdfunding_db.
+
 5.Using the database schema, create the tables in the correct order to handle the foreign keys.
+
 6.Verify the table creation by running a SELECT statement for each table.
+
 7.Import each CSV file into its corresponding SQL table.
+
 8.Verify that each table has the correct data by running a SELECT statement for each.
