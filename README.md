@@ -72,7 +72,7 @@ A "category" column that contains only the category titles
 *    The "deadline" column, renamed to "end_date" and with the UTC times converted to the datetime format
 *    The "category_id" column, with unique identification numbers matching those in the "category_id" column of the category DataFrame
 *    The "subcategory_id" column, with the unique identification numbers matching those in the "subcategory_id" column of the subcategory DataFrame
-*     Export the campaign DataFrame as campaign.csv and save it to your GitHub repository.
+*    Export the campaign DataFrame as campaign.csv and save it to your GitHub repository.
 ## Create the Contacts DataFrame
 
 1. Choose one of the following two options for extracting and transforming the data from the contacts.xlsx Excel data:
@@ -87,7 +87,7 @@ A "category" column that contains only the category titles
 *    Create a new DataFrame that contains the extracted data.
 *    Split each "name" column value into a first and last name, and place each in a new column.
 *    Clean and export the DataFrame as contacts.csv and save it to your GitHub repository.
-3.If you chose Option 2, complete the following steps:
+3. If you chose Option 2, complete the following steps:
 *    Import the contacts.xlsx file into a DataFrame.
 *    Extract the "contact_id", "name", and "email" columns by using regular expressions.
 *    Create a new DataFrame with the extracted data.
